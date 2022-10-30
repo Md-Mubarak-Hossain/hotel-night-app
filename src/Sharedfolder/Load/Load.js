@@ -1,11 +1,12 @@
 import React from 'react';
 
-const Ropute = () => {
+const Load = () => {
     return (
         <div>
+            <p>loading.......</p>
 
         </div>
     );
 };
 
-export default Ropute;
+export default Load;

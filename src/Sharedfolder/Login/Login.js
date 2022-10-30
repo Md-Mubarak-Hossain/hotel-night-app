@@ -1,12 +1,16 @@
 import React, { useContext, useState } from 'react';
 import { FcGoogle } from 'react-icons/fc';
 import { SiGithub } from 'react-icons/si';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Contexts/Context';
 
 const Login = () => {
     const { user, logIn, googleSignIn, gitHubSignIn } = useContext(AuthContext);
     console.log(user);
     const [error, setError] = useState('');
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.from?.state?.pathname || '/';
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -16,15 +20,14 @@ const Login = () => {
         logIn(email, password)
             .then(result => {
                 const user = result.user;
-                console.log(user.email);
                 setError('');
                 form.reset();
-                console.log('log in')
-                return alert('Successfully log in!!!')
+                console.log(user)
+                navigate(from, { replace: true });
+                return alert('Successfully log in!!!');
             })
             .catch(err => {
                 setError('User or Password is invalid!!!')
-                console.log('not log in')
                 console.error(err)
             })
 

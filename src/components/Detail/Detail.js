@@ -7,7 +7,7 @@ const Detail = () => {
     const detail = useLoaderData();
     const { Quality, id, bad, person, picture, category, phone, food, room, about, address, balance
     } = detail;
-    console.log(detail)
+
 
 
 

@@ -6,8 +6,6 @@ import Details from '../Details/Details';
 
 const Home = () => {
     const details = useLoaderData();
-
-    console.log(details)
     return (
         <div>
 

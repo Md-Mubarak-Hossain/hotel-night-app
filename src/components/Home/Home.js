@@ -1,7 +1,6 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import Sidebar from '../../Sharedfolder/Sidebar/Sidebar';
-import Detail from '../Detail/Detail';
 import Details from '../Details/Details';
 
 

@@ -4,7 +4,7 @@ import { SiGithub } from 'react-icons/si';
 import { AuthContext } from '../../Contexts/Context';
 
 const Login = () => {
-    const { user, logIn, googleSignIn } = useContext(AuthContext);
+    const { user, logIn, googleSignIn, gitHubSignIn } = useContext(AuthContext);
     console.log(user);
     const [error, setError] = useState('');
 
@@ -32,6 +32,14 @@ const Login = () => {
     }
     const googleHandle = () => {
         googleSignIn()
+            .then(result => {
+                const user = result.user;
+                console.log(user)
+            })
+            .catch(err => console.error(err))
+    }
+    const gitHandle = () => {
+        gitHubSignIn()
             .then(result => {
                 const user = result.user;
                 console.log(user)
@@ -69,7 +77,7 @@ const Login = () => {
                         </form>
                         <div className="grid place-items-center">
                             <button onClick={googleHandle} className="btn btn-outline w-full my-2 text-primary lowercase"><FcGoogle></FcGoogle><span className='pl-2'>Sign in with </span><span className='text-warning'>google</span></button>
-                            <button className="btn btn-outline w-full my-2 text-primary lowercase"><SiGithub></SiGithub><span className='pl-2'>Sign in with </span><span className='text-warning'>GitHub</span></button>
+                            <button onClick={gitHandle} className="btn btn-outline w-full my-2 text-primary lowercase"><SiGithub></SiGithub><span className='pl-2'>Sign in with </span><span className='text-warning'>GitHub</span></button>
                         </div>
                     </div>
                 </div>

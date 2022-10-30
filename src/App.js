@@ -21,27 +21,27 @@ function App() {
         {
           path: '/',
           element: <Home></Home>,
-          loader: () => fetch('https://hotel-night-app.vercel.app/details')
+          loader: () => fetch('http://localhost:5000/details')
         },
         {
           path: '/room',
           element: <Room></Room>,
-          loader: () => fetch(`https://hotel-night-app.vercel.app/details`)
+          loader: () => fetch(`http://localhost:5000/details`)
         },
         {
           path: '/details',
           element: <Details></Details>,
-          loader: () => fetch('https://hotel-night-app.vercel.app/details')
+          loader: () => fetch('http://localhost:5000/details')
         },
         {
           path: '/detail/:id',
           element: <Detail></Detail>,
-          loader: async ({ params }) => fetch(`https://hotel-night-app.vercel.app/details/${params.id}`)
+          loader: async ({ params }) => fetch(`http://localhost:5000/detail/${params.id}`)
         },
         {
           path: '/book/:id',
           element: <Roombook></Roombook>,
-          loader: async ({ params }) => fetch(`https://hotel-night-app.vercel.app/details/${params.id}`)
+          loader: async ({ params }) => fetch(`http://localhost:5000/detail/${params.id}`)
         },
         {
           path: '/login',

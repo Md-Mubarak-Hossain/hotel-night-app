@@ -37,12 +37,12 @@ function App() {
         {
           path: '/detail/:id',
           element: <PrivateRouter><Detail></Detail></PrivateRouter>,
-          loader: async ({ params }) => fetch(`https://hotel-night-server.vercel.app/detail/${params.id}`)
+          loader: async ({ params }) => fetch(`https://hotel-night-server.vercel.app/details/${params.id}`)
         },
         {
           path: '/book/:id',
           element: <PrivateRouter><Roombook></Roombook></PrivateRouter>,
-          loader: async ({ params }) => fetch(`https://hotel-night-server.vercel.app/detail/${params.id}`)
+          loader: async ({ params }) => fetch(`https://hotel-night-server.vercel.app/details/${params.id}`)
         },
         {
           path: '/login',

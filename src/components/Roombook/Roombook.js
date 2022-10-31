@@ -48,20 +48,19 @@ const Roombook = () => {
             setC(category); setCd('category'); setPe('Total Person: '); setP(person);
             setR(id); setRo('Room no: '); setQ('Quality: '); setQu(Quality);
             setBd('Total Bad: '); setB(bad); setV('Your voucher no: ');
-            setPx5('px-5'); setPx('text-success  px-5  mt-4'); setBtn('text-warning text-xl font-bold btn btn-outline'); setDiv('bg-white text-black py-5')
+            setPx5('px-2 lg:px-5'); setPx('text-success lg:px-5 mx-auto lg:mt-4 w-64 lg:w-full block '); setBtn('text-warning text-xl font-bold btn btn-outline w-56 lg:w-full'); setDiv('bg-white text-black  ')
             form.reset();
         }
     }
 
     return (
-        <div className="hero w-full">
+        <div className="hero lg:w-full">
 
-            <div className="hero-content w-full" >
-                <div className="card flex-shrink-0 w-3/6 shadow-2xl ">
-                    <div className="card-body w-full">
+            <div className="hero-content lg:w-full" >
+                <div className="card flex-shrink-0 lg:w-3/6 shadow-2xl ">
+                    <div className="card-body lg:w-full">
                         <h2 className='font-extrabold text-4xl uppercase underline text-center py-3'>Check Out now</h2>
-                        <h2 className='text-warning text-xl font-bold'>Your voucher no:{`${receit} `}</h2>
-                        <form onSubmit={onClickMsg} className="flex flex-col w-full border-opacity-50" >
+                        <form onSubmit={onClickMsg} className="flex flex-col lg:w-full border-opacity-50" >
                             <div className="grid place-items-center w-full">
                                 <div className="form-control w-full">
                                     <label className="label">
@@ -69,8 +68,8 @@ const Roombook = () => {
                                     </label>
                                     <input type="text" name="name" defaultValue={'no name'} className="input input-bordered w-full" readOnly />
                                 </div>
-                                <div className='grid grid-cols-2 w-full'>
-                                    <div className="form-control w-full pr-2">
+                                <div className='grid grid-cols-1 lg:grid-cols-2 w-full'>
+                                    <div className="form-control w-full lg:pr-2">
                                         <label className="label">
                                             <span className="label-text">Room no</span>
                                         </label>
@@ -82,7 +81,7 @@ const Roombook = () => {
                                         </label>
                                         <input type="text" defaultValue={category} className="input input-bordered w-full" />
                                     </div>
-                                    <div className="form-control w-full pr-2">
+                                    <div className="form-control w-full lg:pr-2">
                                         <label className="label">
                                             <span className="label-text">bad</span>
                                         </label>
@@ -94,7 +93,7 @@ const Roombook = () => {
                                         </label>
                                         <input type="number" defaultValue={person} className="input input-bordered w-full" />
                                     </div>
-                                    <div className="form-control w-full pr-2">
+                                    <div className="form-control w-full lg:pr-2">
                                         <label className="label">
                                             <span className="label-text">Quality</span>
                                         </label>
@@ -108,7 +107,7 @@ const Roombook = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className="form-control w-full">
+                            <div className="form-control lg:w-full">
                                 <label className="label">
                                     <span className="label-text">Email</span>
                                 </label>
@@ -142,12 +141,12 @@ const Roombook = () => {
                                 <p className={px5}>{payment}{bal}</p>
                                 <p className={px}>{v}{`${receit} `}</p>
                             </span >
-                            <Pdf targetRef={ref} filename="vourcher.pdf">
+                            <Pdf targetRef={ref} filename="voucher.pdf">
                                 {({ toPdf }) => (
                                     <button className={btn} onClick={toPdf} > {download}</button>
                                 )}
                             </Pdf>
-                        </>
+                        </ >
                     </div >
                 </div >
             </div >

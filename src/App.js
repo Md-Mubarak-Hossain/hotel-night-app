@@ -1,4 +1,4 @@
-
+import React from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
 import About from './components/About/About';

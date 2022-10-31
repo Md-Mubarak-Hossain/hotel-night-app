@@ -1,12 +1,16 @@
 import React, { useContext, useState } from 'react';
 import { FcGoogle } from 'react-icons/fc';
 import { SiGithub } from 'react-icons/si';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Contexts/Context';
 
 const Signup = () => {
     const { signUp, googleSignIn, gitHubSignIn } = useContext(AuthContext);
     const [error, setError] = useState('');
     const [error1, setError1] = useState('');
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.from?.state?.pathname || '/';
     const handleSubmit = (event) => {
         event.preventDefault();
         const form = event.target;
@@ -29,6 +33,7 @@ const Signup = () => {
                     console.log(user);
                     setError1('');
                     form.reset();
+                    navigate(from, { replace: true });
                     return alert('Successfully sign up')
                 })
                 .catch(err => console.error(err))
@@ -40,6 +45,7 @@ const Signup = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user)
+                navigate(from, { replace: true });
             })
             .catch(err => console.error(err))
     }
@@ -48,18 +54,18 @@ const Signup = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user)
+                navigate(from, { replace: true });
             })
             .catch(err => console.error(err))
     }
     return (
         <div className="hero w-full">
-
             <div className="hero-content w-full" >
-                <div className="card flex-shrink-0 w-3/6 shadow-2xl ">
-                    <div className="card-body w-full">
-                        <h2 className='font-extrabold text-4xl uppercase underline text-center py-3'>Please Sign up now</h2>
-                        <form onSubmit={handleSubmit} className="flex flex-col w-full border-opacity-50">
-                            <div className="grid     place-items-center w-full">
+                <div className="card flex-shrink-0 lg:w-3/6 shadow-2xl ">
+                    <div className="card-body lg:w-full">
+                        <h2 className='font-extrabold lg:text-4xl uppercase underline text-center py-3 underline decoration-wavy decoration-pink-500'>Please Sign up now</h2>
+                        <form onSubmit={handleSubmit} className="flex flex-col lg:w-full border-opacity-50">
+                            <div className="grid place-items-center w-full">
 
                                 <div className="form-control w-full">
                                     <label className="label">

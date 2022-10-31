@@ -37,6 +37,7 @@ const Login = () => {
         googleSignIn()
             .then(result => {
                 const user = result.user;
+                navigate(from, { replace: true });
                 console.log(user)
             })
             .catch(err => console.error(err))
@@ -46,18 +47,18 @@ const Login = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user)
+                navigate(from, { replace: true });
             })
             .catch(err => console.error(err))
     }
     return (
         <div className="hero w-full">
-
             <div className="hero-content w-full" >
-                <div className="card flex-shrink-0 w-1/2 shadow-2xl ">
-                    <div className="card-body w-full">
-                        <h2 className='font-extrabold text-5xl uppercase underline'>Please Log in now.</h2>
-                        <form onSubmit={handleSubmit} className="flex flex-col w-full border-opacity-50">
-                            <div className="grid     place-items-center w-full">
+                <div className="card flex-shrink-0 lg:w-1/2 shadow-2xl ">
+                    <div className="card-body lg:w-full">
+                        <h2 className='font-extrabold lg:text-5xl uppercase underline decoration-wavy decoration-pink-500'>Please Log in now.</h2>
+                        <form onSubmit={handleSubmit} className="flex flex-col lg:w-full border-opacity-50">
+                            <div className="grid place-items-center w-full">
 
                                 <div className="form-control w-full">
                                     <label className="label">

@@ -5,7 +5,7 @@ import Roomdetail from '../Roomdetail/Roomdetail';
 const Room = () => {
     const details = useLoaderData();
     return (
-        <div className="grid grid-cols-3 flex-grow  card bg-base-300 rounded-box place-items-center w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-3 flex-grow  card lg:bg-base-300 rounded-box place-items-center w-full">
             {
 
                 details.map(detail => <Roomdetail key={detail.id}

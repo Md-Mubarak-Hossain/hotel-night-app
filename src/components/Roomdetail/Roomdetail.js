@@ -16,7 +16,7 @@ const Roomdetail = ({ detail }) => {
                     <h2>Quality:{Quality}</h2>
                     <h2>balance:{balance}</h2>
                     <div className="card-actions w-full ">
-                        <Link to={`/detail/${id}`}> <button className="btn btn-outline text-primary w-72 ">See Details</button></Link>
+                        <Link to={`/detail/${id}`}> <button className="btn btn-outline  w-72 ">See Details</button></Link>
                     </div>
                 </div>
             </div>

@@ -54,10 +54,10 @@ const Login = () => {
     return (
         <div className="hero w-full">
             <div className="hero-content w-full" >
-                <div className="card flex-shrink-0 lg:w-1/2 shadow-2xl ">
-                    <div className="card-body lg:w-full">
-                        <h2 className='font-extrabold lg:text-5xl uppercase underline decoration-wavy decoration-pink-500'>Please Log in now.</h2>
-                        <form onSubmit={handleSubmit} className="flex flex-col lg:w-full border-opacity-50">
+                <div className="flex-shrink-0 lg:w-2/5">
+                    <div className="">
+                        <h2 className='text-xl '>Login Here.</h2>
+                        <form onSubmit={handleSubmit} className="flex flex-col  mx-auto border-opacity-50">
                             <div className="grid place-items-center w-full">
 
                                 <div className="form-control w-full">
@@ -80,8 +80,8 @@ const Login = () => {
                             <div className="divider">OR</div>
                         </form>
                         <div className="grid place-items-center">
-                            <button onClick={googleHandle} className="btn btn-outline w-full my-2 text-primary lowercase"><FcGoogle></FcGoogle><span className='pl-2'>Sign in with </span><span className='text-warning'>google</span></button>
-                            <button onClick={gitHandle} className="btn btn-outline w-full my-2 text-primary lowercase"><SiGithub></SiGithub><span className='pl-2'>Sign in with </span><span className='text-warning'>GitHub</span></button>
+                            <button onClick={googleHandle} className="btn btn-outline w-full my-2  lowercase"><FcGoogle></FcGoogle><span className='pl-2'>Sign in with </span><span className='text-warning'>google</span></button>
+                            <button onClick={gitHandle} className="btn btn-outline w-full my-2  lowercase"><SiGithub></SiGithub><span className='pl-2'>Sign in with </span><span className='text-warning'>GitHub</span></button>
                         </div>
                     </div>
                 </div>

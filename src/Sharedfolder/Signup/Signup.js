@@ -61,12 +61,11 @@ const Signup = () => {
     return (
         <div className="hero w-full">
             <div className="hero-content w-full" >
-                <div className="card flex-shrink-0 lg:w-3/6 shadow-2xl ">
+                <div className="card flex-shrink-0 lg:w-2/6 ">
                     <div className="card-body lg:w-full">
-                        <h2 className='font-extrabold lg:text-4xl uppercase underline text-center py-3 underline decoration-wavy decoration-pink-500'>Please Sign up now</h2>
+                        <h2 className='text-lg  text-center'> Sign up form</h2>
                         <form onSubmit={handleSubmit} className="flex flex-col lg:w-full border-opacity-50">
                             <div className="grid place-items-center w-full">
-
                                 <div className="form-control w-full">
                                     <label className="label">
                                         <span className="label-text">Name</span>
@@ -93,15 +92,15 @@ const Signup = () => {
                                     <input type="password" name="confirm" placeholder="confirm password" className="input input-bordered w-full" />
                                     <p className='text-red-800 text-sm'>{error1}</p>
                                 </div>
-                                <div className="form-control mt-5 w-full">
+                                <div className="form-control w-full py-2">
                                     <button className="btn btn-outline w-full ">Sign Up</button>
                                 </div>
                             </div>
                             <div className="divider">OR</div>
                         </form>
                         <div className="grid place-items-center">
-                            <button onClick={googleHandle} className="btn btn-outline w-full my-2 text-primary lowercase"><FcGoogle></FcGoogle><span className='pl-2'>Sign in with </span><span className='text-warning'>google</span></button>
-                            <button onClick={gitHandle} className="btn btn-outline w-full my-2 text-primary lowercase"><SiGithub></SiGithub><span className='pl-2'>Sign in with </span><span className='text-warning'>GitHub</span></button>
+                            <button onClick={googleHandle} className="btn btn-outline w-full my-1"><FcGoogle></FcGoogle><span className='pl-2'>Sign in with </span><span className='text-warning'>google</span></button>
+                            <button onClick={gitHandle} className="btn btn-outline w-full my-1  lowercase"><SiGithub></SiGithub><span className='pl-2'>Sign in with </span><span className='text-warning'>GitHub</span></button>
                         </div>
                     </div>
                 </div>

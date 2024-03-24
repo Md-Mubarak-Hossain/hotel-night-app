@@ -9,39 +9,19 @@ const Home = () => {
     return (
         <div>
 
-            <div div className="flex flex-col w-full lg:flex-row" >
-                <div className="flex-grow  card bg-base-300 rounded-box place-items-center w-full lg:w-10/12">
-                    <img src="https://www.acslocks.com/wp-content/uploads/2022/01/1642408320-What-is-Hotel-Reception.jpg" alt="reception" className='w-full' />
-
-                </div>
-                <div className="divider lg:divider-horizontal"></div>
-                <div className="grid flex-grow card bg-base-300 rounded-box place-items-center w-full lg:w-2/12 flex-col items-start ">
-                    <h2 className='lg:font-extrabold lg:text-4xl text-primary underline decoration-wavy decoration-pink-500'>See Room</h2>
-                    <div className='mt-0 h-1/2'>
+            <div div className="flex flex-col w-full lg:flex-row" >                              
+                <div className="grid flex-grow  bg-base-300 place-items-center w-full lg:w-3/12 flex-col items-start ">
+                    
+                    <div className='mt-0 h-full'>
                         {
                             details.map(detail => <Sidebar key={detail.id}
                                 detail={detail}></Sidebar>)
                         }
                     </div>
-                    <div className="carousel w-full h-full">
-                        <div id="slide1" className="carousel-item relative w-full">
-                            <img src="https://placeimg.com/800/200/arch" className="w-full h-full" alt='carousel' />
-                            <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                                <a href="#slide4" className="btn btn-circle">❮</a>
-                                <a href="#slide2" className="btn btn-circle">❯</a>
-                            </div>
-                        </div>
-                        <div id="slide2" className="carousel-item relative w-full">
-                            <img src="https://placeimg.com/800/200/arch" className="w-full full" alt='carousel' />
-                            <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                                <a href="#slide1" className="btn btn-circle">❮</a>
-                                <a href="#slide3" className="btn btn-circle">❯</a>
-                            </div>
-                        </div>
-                    </div>
+                    
                 </div>
             </div >
-            <div className="grid grid-cols-1 lg:grid-cols-3 flex-grow  card bg-base-300 rounded-box place-items-center w-full">
+            <div className="grid grid-cols-1 lg:grid-cols-3 flex-grow  bg-base-300  place-items-center w-full">
                 {
                     details.map(detail => <Details key={detail.id}
 

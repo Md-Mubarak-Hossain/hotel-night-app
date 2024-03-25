@@ -26,7 +26,7 @@ const Detail = () => {
                                 <img src="https://ichef.bbci.co.uk/images/ic/832xn/p0d6r2n7.jpg" className="rounded-xl w-96" alt='food' />
                             </figure>
                             <div className="card-body items-center text-center text-black">
-                                <h2 className="card-title underline decoration-wavy decoration-pink-500">Food Menu</h2>
+                                <h2 className="card-title">Food Menu</h2>
                                 <div className='grid grid-cols-2'>
                                     {
                                         food.map(f => <li className='text-start '>{f}</li>)

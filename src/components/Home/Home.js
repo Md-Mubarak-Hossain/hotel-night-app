@@ -1,14 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import Sidebar from '../../Sharedfolder/Sidebar/Sidebar';
 import Details from '../Details/Details';
+import Load from '../../Sharedfolder/Load/Load';
+import { AuthContext } from '../../Contexts/Context';
 
 const Home = () => {
     const details = useLoaderData();
-   
+    const {loading}=useContext(AuthContext);
+    if(loading) return <Load/>
     return (
         <div>
-
             <div div className={`flex flex-col w-full md:flex-row`} >                              
                 <div className={`grid flex-grow  bg-base-300 place-items-center w-full md:w-3/12 flex-col items-start h-1/2`}>
                     

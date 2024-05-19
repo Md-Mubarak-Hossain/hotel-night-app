@@ -7,9 +7,9 @@ import FooterNew from '../../Sharedfolder/Footer/FooterNew';
 const Main = () => {
     return (
         <div>
-            <Header></Header>
-            <Outlet></Outlet>
-            <FooterNew></FooterNew>
+            <div className='pb-16 text-sm'><Header></Header></div>
+            <div className='text-sm py-5'><Outlet></Outlet></div>
+            <div className='text-sm'><FooterNew></FooterNew></div>
         </div>
     );
 };

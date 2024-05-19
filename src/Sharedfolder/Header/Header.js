@@ -11,7 +11,7 @@ const Header = () => {
             .catch(err => console.error(err))
     }
     return (
-        <div className="navbar bg-base-300">
+        <div data-theme='synthewave' className="navbar bg-base-300 fixed top-0 h-10 z-20">
             <div className="navbar-start">
                 <div className="dropdown ">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
